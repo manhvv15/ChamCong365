@@ -1,0 +1,427 @@
+﻿<Window x:Class="ChamCong365.NhanVien.ChamCongBangQR"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChamCong365.NhanVien"
+             mc:Ignorable="d"  >
+    <Border CornerRadius="10"
+        Height="auto">
+        <Grid x:Name="FormBodyChamCong">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="72*"/>
+                <ColumnDefinition Width="143*"/>
+            </Grid.ColumnDefinitions>
+            <Grid
+                HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="470" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!--Menu Chức Năng-->
+                <Grid Cursor="Hand" Grid.Column="0"
+                    Height="600"
+                    VerticalAlignment="Top"
+                    Margin="0 0 30 0"
+                    x:Name="stpMenuFunction">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Chấm Công bang QR-->
+                    <Grid Cursor="Hand" Grid.Row="0"
+                      x:Name="grChamCong">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border 
+                            Style="{StaticResource BorderListFunction01}"
+                            Background="#97C25F"
+                            Grid.ColumnSpan="2" Margin="370,28,0,27">
+                        </Border>
+                        <Border 
+                            
+                        Style="{StaticResource BorderListFunction02}" RenderTransformOrigin="0.5,0.5" >
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="0.408"/>
+                                    <RotateTransform Angle="-0.705"/>
+                                    <TranslateTransform Y="1.193"/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="85" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#EDF3FF"/>
+                                    <GradientStop Color="#FFFFFF" Offset="0.7"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock 
+                                
+                                Text="Chấm công bằng QR"
+                                HorizontalAlignment="Left"  Margin="40,0,0,23"
+                                TextWrapping="WrapWithOverflow"
+                             VerticalAlignment="Bottom"
+                             Width="215"/>
+                        </Border>
+                        <Border
+                        Style="{StaticResource BorderListFunction03}">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="2,1" >
+                                    <LinearGradientBrush.Transform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="50" AngleY="20"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Color="#97C25F"/>
+                                    <GradientStop Color="#7DA047" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Style="{StaticResource ListFunction04}">
+                            <TextBlock 
+                            x:Name="txbF1"
+                            Text="1"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="250,35,90,35">
+                            <Image Source="{StaticResource iconGachDrawingImage}" Margin="42,0,-42,0"/>
+                        </Border>
+                        <Border Height="30" Width="30" Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCQR}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                    </Grid>
+                    <!--Chấm công bằng nhận diện khuôn mặt-->
+                    <Grid Cursor="Hand" Grid.Row="1"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border 
+                        Style="{StaticResource BorderListFunction01}"
+                        Background="#E8811A"
+                        Grid.ColumnSpan="2" Margin="370,28,0,27">
+                        </Border>
+                        <Border 
+                        Style="{StaticResource BorderListFunction02}" Margin="58,22,38,22">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="85" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#EDF3FF"/>
+                                    <GradientStop Color="#FFFFFF" Offset="0.7"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock  
+                            Text="Chấm công bằng nhận diện khuôn mặt" HorizontalAlignment="Left"  Margin="40 0 0 0"
+                                TextWrapping="WrapWithOverflow"
+                             VerticalAlignment="Center"
+                             Width="215"/>
+                        </Border>
+                        <Border 
+                        Style="{StaticResource BorderListFunction03}">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="2,1">
+                                    <LinearGradientBrush.Transform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="50" AngleY="20"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Color="#FFA13B"/>
+                                    <GradientStop Color="#E8811A  " Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Style="{StaticResource ListFunction04}">
+                            <TextBlock 
+                            Text="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment='Center'/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="250,35,90,35">
+                            <Image Source="{StaticResource iconGachDrawingImage}" Margin="42,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="250,35,90,35"/>
+                        <Border Height="30" Width="30" Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCFace}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                    </Grid>
+                    <!--Chấm công bằng tài khoản công ty-->
+                    <Grid Cursor="Hand" Grid.Row="2"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border
+                        Style="{StaticResource BorderListFunction01}"
+                        Background="#C1403A"
+                        Grid.ColumnSpan="2" Margin="370,28,0,27">
+                        </Border>
+                        <Border 
+                        Style="{StaticResource BorderListFunction02}">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="85" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#EDF3FF"/>
+                                    <GradientStop Color="#FFFFFF" Offset="0.7"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock  
+                            Text="Chấm công bằng tài khoản công ty" HorizontalAlignment="Left"  Margin="44,7,0,0"
+                                TextWrapping="WrapWithOverflow"
+                             VerticalAlignment="Top"
+                             Width="215"/>
+                        </Border>
+                        <Border 
+                        Style="{StaticResource BorderListFunction03}">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="2,1" >
+                                    <LinearGradientBrush.Transform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="50" AngleY="20"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Color="#FF5B4D"/>
+                                    <GradientStop Color="#C1403A  " Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Style="{StaticResource ListFunction04}">
+                            <TextBlock 
+                            Text="3" 
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="250,35,90,35">
+                            <Image Source="{StaticResource iconGachDrawingImage}" Margin="42,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCcompany}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                    </Grid>
+                    <!--Tao de xuat-->
+                    <Grid Cursor="Hand" Grid.Row="3" MouseUp="Grid_MouseUp" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="222*"/>
+                            <ColumnDefinition Width="209*"/>
+                            <ColumnDefinition Width="9*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border 
+                           Style="{StaticResource BorderListFunction01}"
+                           Background="#8069FF" Margin="148,28,0,27" Grid.Column="1"/>
+                        <Border 
+                       Style="{StaticResource BorderListFunction02}" Grid.ColumnSpan="2" Margin="55,22,41,22">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="85" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#EDF3FF"/>
+                                    <GradientStop Color="#FFFFFF" Offset="0.7"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock
+                                x:Name="txbSalarySettings"
+                            Text="Tạo đề xuất" HorizontalAlignment="Left"  Margin="40,0,0,0"
+                                TextWrapping="WrapWithOverflow"
+                             VerticalAlignment="Center"
+                             Width="215"/>
+                        </Border>
+                        <Border 
+                        Style="{StaticResource BorderListFunction03}" Margin="0,16,0,16">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="2,1" >
+                                    <LinearGradientBrush.Transform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="50" AngleY="20"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Color="#8069FF"/>
+                                    <GradientStop Color="#5E53C9" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Style="{StaticResource ListFunction04}" Margin="8,25,0,24">
+                            <TextBlock
+                                x:Name="txbF4"
+                            Text="4" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="28,35,90,35" Grid.Column="1">
+                            <Image Source="{StaticResource iconGachDrawingImage}" Margin="42,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="141,45,38,45" Grid.Column="1">
+                            <Path Data="{DynamicResource iconPCDeXuat}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                    </Grid>
+                    <!--lich su-->
+                    <Grid Cursor="Hand" Grid.Row="4"
+                      x:Name="grChamCong5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border 
+                            Style="{StaticResource BorderListFunction01}"
+                            Background="#40B9CC"
+                            Grid.ColumnSpan="5" Margin="370,28,0,27">
+                        </Border>
+                        <Border 
+                            
+                        Style="{StaticResource BorderListFunction02}">
+
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="85" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#EDF3FF"/>
+                                    <GradientStop Color="#FFFFFF" Offset="0.7"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock 
+                                
+                                x:Name="txbChamCong5"
+                                Text="Lịch sử" HorizontalAlignment="Left"  Margin="40,0,0,0"
+                                TextWrapping="WrapWithOverflow"
+                             VerticalAlignment="Center"
+                             Width="215"/>
+                        </Border>
+                        <Border
+                        Style="{StaticResource BorderListFunction03}">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="2,1" >
+                                    <LinearGradientBrush.Transform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="50" AngleY="20"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Color="#318BA3"/>
+                                    <GradientStop Color="#40B9CC" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Style="{StaticResource ListFunction04}">
+                            <TextBlock 
+                            x:Name="txbF5"
+                            Text="5"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                        </Border>
+                        <Border 
+                        Height="50" 
+                        Margin="250,35,90,35">
+                            <Image Source="{StaticResource iconGachDrawingImage}" Margin="42,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCHistory}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCHistory1}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCHistory2}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                        <Border 
+                        Height="30" 
+                        Width="30" 
+                        Margin="325 0 0 0">
+                            <Path Data="{DynamicResource iconPCHistory3}" Fill="#5B5B5B" Height="30" VerticalAlignment="Top" Margin="-12,0,-42,0"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+
+
+                <Grid Grid.Column="1"
+                     x:Name="grLoadFunctionQR"
+                    Margin="30,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+
+    </Border>
+</Window>
